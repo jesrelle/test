@@ -1,0 +1,24 @@
+<label for="name">name</label>
+<input type="text" id="name" #name>
+<label for="contact">contact number</label>
+<input type="text" id="contact" #contact><br>
+<label for="address">address</label>
+<input type="text" id="address" #address>
+<label for="mail">e-mail</label>
+<input type="text" id="mail" #mail>
+<button (click)="onSubmit(name.value, contact.value, address.value, mail.value)">Submit</button>
+<hr>
+<button (click)="onGetData()">Get Data</button>
+<ul>
+  <li *ngFor="let item of items">{{item.name}}<br>{{item.contact}}<br>{{item.address}}<br>{{item.mail}}  </li>
+  
+</ul>
+<hr>
+<p>{{asyncString | async}}</p>
+<br>
+ <!--<h1>wikipedia</h1>
+    <p><i>type here</i></p>
+    <input #term (keyup)="search(term.value)"/>
+    <ul>
+      <li *ngFor="let item of items | async">{{item}}</li>
+    </ul>-->
